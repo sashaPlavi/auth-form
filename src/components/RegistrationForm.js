@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import './RegistrationForm.css';
 
 class RegistrationForm extends React.Component {
   state = {
@@ -20,27 +21,32 @@ class RegistrationForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>Registration</h1>
-        <input
-          placeholder="Username"
-          value={this.state.name}
-          onChange={(e) => this.setState({ name: e.target.value })}
-        />
-        <input
-          placeholder="Email"
-          value={this.state.email}
-          onChange={(e) => this.setState({ email: e.target.value })}
-        />
+      <div className="reg-form-container">
+        <form onSubmit={this.handleSubmit} className="reg-form">
+          <h1>Registration</h1>
+          <input
+            className="input-item"
+            placeholder="Username"
+            value={this.state.name}
+            onChange={(e) => this.setState({ name: e.target.value })}
+          />
+          <input
+            className="input-item"
+            placeholder="Email"
+            value={this.state.email}
+            onChange={(e) => this.setState({ email: e.target.value })}
+          />
 
-        <input
-          placeholder="Password"
-          value={this.state.password}
-          onChange={(e) => this.setState({ password: e.target.value })}
-        />
+          <input
+            className="input-item"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={(e) => this.setState({ password: e.target.value })}
+          />
 
-        <input type="submit" value="Submit" />
-      </form>
+          <input className="input-btn-item" type="submit" value="Submit" />
+        </form>
+      </div>
     );
   }
 }
