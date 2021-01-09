@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from './MenuItems';
 import { Button } from '../Button/Button';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export class Navbar extends Component {
@@ -34,8 +35,14 @@ export class Navbar extends Component {
             );
           })}
         </ul>
-        <Button>Sign Up</Button>
-        <Button>Login</Button>
+        <div class="button-wrapper">
+          <Link to="/register">
+            <Button>Sign Up</Button>
+          </Link>
+          <Link to="/login">
+            <Button to="/login">Login</Button>
+          </Link>
+        </div>
       </nav>
     );
   }

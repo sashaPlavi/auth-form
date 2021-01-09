@@ -31,7 +31,10 @@
   justify-content: end;
   margin-right: 2rem;
 }
-
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .nav-links {
   color: #fff;
   padding: 0.5rem 1rem;
