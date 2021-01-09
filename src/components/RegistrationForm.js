@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 
-class Form extends React.Component {
+class RegistrationForm extends React.Component {
   state = {
     name: '',
     password: '',
@@ -21,6 +21,7 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <h1>Registration</h1>
         <input
           placeholder="Username"
           value={this.state.name}
@@ -44,4 +45,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default RegistrationForm;

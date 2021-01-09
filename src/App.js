@@ -1,10 +1,12 @@
 import './App.css';
-import Form from './components/Form';
+import RegistrationForm from './components/RegistrationForm';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Navbar />
+      <RegistrationForm />
     </div>
   );
 }
