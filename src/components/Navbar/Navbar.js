@@ -5,7 +5,7 @@ import './Navbar.css';
 
 export class Navbar extends Component {
   state = {
-    clicked: true,
+    clicked: false,
   };
 
   handleClick = () => {
@@ -23,7 +23,7 @@ export class Navbar extends Component {
             className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}
           ></i>
         </div>
-        <ul className={this.state.clicked ? 'nav-menu active' : 'nav menu'}>
+        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
@@ -35,6 +35,7 @@ export class Navbar extends Component {
           })}
         </ul>
         <Button>Sign Up</Button>
+        <Button>Login</Button>
       </nav>
     );
   }
