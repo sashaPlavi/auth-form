@@ -7,6 +7,7 @@ import './Navbar.css';
 export class Navbar extends Component {
   state = {
     clicked: false,
+    logedin: true,
   };
 
   handleClick = () => {
@@ -24,17 +25,22 @@ export class Navbar extends Component {
             className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}
           ></i>
         </div>
-        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {this.state.logedin ? (
+          <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+            {MenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a className={item.cName} href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          ''
+        )}
+
         <div class="button-wrapper">
           <Link to="/register">
             <Button>Sign Up</Button>

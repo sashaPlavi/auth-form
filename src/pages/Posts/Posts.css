@@ -1,0 +1,22 @@
+.post-container {
+  display: flex;
+  width: 100%;
+  height: 200vh;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: yellow;
+
+  justify-content: center;
+}
+.posts-item {
+  width: 80%;
+  background: orange;
+  margin: 1rem auto;
+  padding: 1rem 0.5rem;
+}
